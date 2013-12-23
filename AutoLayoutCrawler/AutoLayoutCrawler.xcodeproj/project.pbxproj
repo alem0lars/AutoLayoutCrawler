@@ -22,8 +22,10 @@
 		5A1BB264186198E9005BB191 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A1BB262186198E9005BB191 /* InfoPlist.strings */; };
 		5A1BB266186198E9005BB191 /* AutoLayoutCrawlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BB265186198E9005BB191 /* AutoLayoutCrawlerTests.m */; };
 		5A3AE6F51862DC0A0024534B /* Example0.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3AE6F31862DC0A0024534B /* Example0.xib */; };
-		5A3AE6F71862E75F0024534B /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3AE6F61862E75F0024534B /* View.xib */; };
 		5A3AE6FA1862F6430024534B /* ALCResultFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AE6F91862F6430024534B /* ALCResultFormatter.m */; };
+		5A79B9461866C8F900B71AA7 /* NoConstraints.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A79B9451866C8F900B71AA7 /* NoConstraints.xib */; };
+		5A79B94A1866CB4600B71AA7 /* Centered.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A79B9491866CB4600B71AA7 /* Centered.xib */; };
+		5AE5C2F11866DEAE00FD4725 /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5C2F01866DEAE00FD4725 /* Toolbar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +59,11 @@
 		5A1BB263186198E9005BB191 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A1BB265186198E9005BB191 /* AutoLayoutCrawlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutCrawlerTests.m; sourceTree = "<group>"; };
 		5A3AE6F31862DC0A0024534B /* Example0.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Example0.xib; sourceTree = "<group>"; };
-		5A3AE6F61862E75F0024534B /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		5A3AE6F81862F6430024534B /* ALCResultFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCResultFormatter.h; sourceTree = "<group>"; };
 		5A3AE6F91862F6430024534B /* ALCResultFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCResultFormatter.m; sourceTree = "<group>"; };
+		5A79B9451866C8F900B71AA7 /* NoConstraints.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoConstraints.xib; sourceTree = "<group>"; };
+		5A79B9491866CB4600B71AA7 /* Centered.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Centered.xib; sourceTree = "<group>"; };
+		5AE5C2F01866DEAE00FD4725 /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +174,10 @@
 		5A3AE6F11862DC0A0024534B /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				5A3AE6F61862E75F0024534B /* View.xib */,
 				5A3AE6F31862DC0A0024534B /* Example0.xib */,
+				5A79B9451866C8F900B71AA7 /* NoConstraints.xib */,
+				5A79B9491866CB4600B71AA7 /* Centered.xib */,
+				5AE5C2F01866DEAE00FD4725 /* Toolbar.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -281,10 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3AE6F51862DC0A0024534B /* Example0.xib in Resources */,
-				5A3AE6F71862E75F0024534B /* View.xib in Resources */,
+				5AE5C2F11866DEAE00FD4725 /* Toolbar.xib in Resources */,
 				5A1BB253186198E9005BB191 /* Images.xcassets in Resources */,
 				5A1BB245186198E9005BB191 /* InfoPlist.strings in Resources */,
+				5A79B94A1866CB4600B71AA7 /* Centered.xib in Resources */,
 				5A1BB24E186198E9005BB191 /* Main.storyboard in Resources */,
+				5A79B9461866C8F900B71AA7 /* NoConstraints.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

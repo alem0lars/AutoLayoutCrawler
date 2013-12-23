@@ -125,24 +125,34 @@
       constraintContent:(NSString **)constraintContent
     viewConstrainedName:(NSString **)viewConstrainedName
 {
+    BOOL matched = YES;
     NSRange stringRange = NSMakeRange(0, [string length]);
     NSError *error;
+
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:CONSTRAINT_REGEX
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
     
     if (error) {
-        return NO;
+        matched = NO;
+    } else {
+        NSArray *matches = [regex matchesInString:string options:0 range:stringRange];
+        if (matches && matches.count > 0) {
+            for (NSTextCheckingResult *match in matches) {
+                if (matched) {
+                    *constraintId = [string substringWithRange:[match rangeAtIndex:1]];
+                    *constraintContent = [string substringWithRange:[match rangeAtIndex:2]];
+                    *viewConstrainedName = [string substringWithRange:[match rangeAtIndex:3]];
+                    matched = (*constraintId != nil) && (*constraintContent != nil) && (*viewConstrainedName != nil);
+                }
+            }
+        } else {
+            NSLog(@"Warn: Unmatched %@", string);
+            matched = NO;
+        }
     }
     
-    NSArray *matches = [regex matchesInString:string options:0 range:stringRange];
-    for (NSTextCheckingResult *match in matches) {
-        *constraintId = [string substringWithRange:[match rangeAtIndex:1]];
-        *constraintContent = [string substringWithRange:[match rangeAtIndex:2]];
-        *viewConstrainedName = [string substringWithRange:[match rangeAtIndex:3]];
-    }
-    
-    return YES;
+    return matched;
 }
 
 - (BOOL)matchContainsConstraint:(NSString *)string

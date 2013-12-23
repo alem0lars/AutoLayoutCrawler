@@ -23,6 +23,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5La-fq-IdV">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f7s-YL-slV"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Clear" id="cGC-3O-MzR">
                                         <connections>
